@@ -1,0 +1,12 @@
+<!-- 友情推荐工具条 -->
+<div class="side">
+      <div>
+          <i class="fa fa-external-link"></i>
+          Links
+      </div>
+      <ul  class="content-ul">
+          {% for s in site.useful_urls %}
+            <li><a href="{{s.url}}">{{s.name}}</a>：{{s.desc}}</li>
+          {% endfor %}
+      </ul>
+</div>

@@ -1,0 +1,221 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: 鹤啸九天
+brief-intro: 自律更自由，平凡不平庸
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://wqw547243068.github.io" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+# other links
+twitter_username: wqw547243068
+facebook_username: wqw547243068@163.com
+github_username:  wqw547243068
+github_home:  http://wqw547243068.github.com
+email: wqw547243068@163.com
+weibo_username: u/1232977597
+zhihu_username: wangqiwen
+linkedIn_username:
+dribbble_username:
+
+description_footer: 学习资料汇总
+
+# ======= 评论插件 ============
+# comments
+comments: true
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+# duoshuo_shortname: wqw547243068 # 【2022-9-28】duoshuo已失效
+disqus_shortname: wqw # [2019-04-29]vpn，通过google账号申请，https://wqw.disqus.com/admin/install/platforms/jekyll/
+
+# 【2019-07-25】韩国来必力评论系统 Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: MTAyMC80NTU2OC8yMjA3OQ==
+
+# [2019-11-01]gittalk评论插件， https://aerolith.ink/2018/08/25/Gitalk/
+
+# Gitalk settings [2022-9-27]更新过期密钥，https://github.com/settings/applications/1158954
+comment_gitalk_clientId: a34109f2e38d41848408
+comment_gitalk_clientSecret: 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
+#comment_gitalk_clientSecret: 36babd95c5defd040547c81bb1a12008194e73a6 # 新token导致gitalk无法完全展现
+comment_gitalk_repo: wqw547243068.github.io
+# ======== 网站统计 =========
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 0600ccce38264ecba9a3c1b652c83b75
+#baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
+google_analytics_id: UA-139247575-1 # google 分析追踪id
+
+# ======== markdown ========
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# 【2022-9-22】扩充（Ruby）插件，paginate 
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-spaceship
+  - jekyll-mermaid
+# 【2022-9-23】规避github page里的safe模式，测试
+whitelist: 
+  - jekyll-spaceship
+  - jekyll-mermaid
+
+paginate: 25
+
+# useful websites
+useful_urls:
+  - 
+    name : WaitButWhy
+    url : https://waitbutwhy.com/
+    desc : 国外知名科技博主
+  -
+    name : 3blue1brown
+    url : http://www.3blue1brown.com/
+    desc : 优质数学教学视频
+  - 
+    name : prajwalsouza可视化项目
+    url : https://prajwalsouza.github.io/
+    desc : 传染病可视化模拟
+  -
+    name : Google AI Lab
+    url : https://aiexperiments.withgoogle.com/
+    desc : 汇总各种有意思的demo
+  - 
+    name : Polo club
+    url : https://poloclub.github.io/
+    desc : Human-Centered AI of Georgia Tech, 各类AI可视化工作，含GAN Lab
+  -
+    name : OpenAI研究员Lilian
+    url : https://lilianweng.github.io/lil-log/
+    desc : OpenAI机器人项目研究员的技术博客
+  -
+    name : Lingdong
+    url : https://lingdong.works/
+    desc : CMU在读学生Lingdong的项目集合,含文言文写代码
+  - 
+    name : MANA
+    url : http://manaai.cn/
+    desc : AI算法市场
+  -
+    name : Yann Lecun(杨立昆)
+    url : http://yann.lecun.com/
+    desc : 三巨头之一
+  -
+    name : Andrej Karpathy
+    url : http://karpathy.github.io/
+    desc : 深度学习界的AK47
+  - 
+    name : Jay Alammar
+    url : https://jalammar.github.io/
+    desc : 【精品】图解系列
+  -
+    name : Sebastian Ruder
+    url : https://ruder.io/
+    desc : DeepMind成员的最新技术跟进
+  -
+    name : 李宏毅 (Hung-yi Lee)
+    url : http://speech.ee.ntu.edu.tw/~tlkagk/
+    desc : 台大教授
+  -
+    name : Colah’s Blog
+    url : http://colah.github.io/
+    desc : 精品文章
+  -
+    name : 集智俱乐部
+    url : 如何在观测数据下进行因果效应评估 
+    desc : 没有围墙的大学
+  - 
+    name : prajwalsouza可视化项目
+    url : https://prajwalsouza.github.io/
+    desc : 传染病可视化模拟
+  -
+    name : 一亩三分地
+    url : https://www.1point3acres.com/
+    desc : 北美华人社区
+  - 
+    name : Floydhub
+    url : https://blog.floydhub.com/
+    desc : Floydhub技术博客
+  - 
+    name : 爱可可
+    url : https://weibo.com/fly51fly
+    desc : 微博大V，实时更新最新技术
+  -
+    name : RL入门资料
+    url : https://simoninithomas.github.io/Deep_reinforcement_learning_Course/
+    desc : Deep Reinforcement Learning from beginner to expert
+  -
+    name : 深度学习前沿笔记
+    url : https://zhuanlan.zhihu.com/c_188941548
+    desc : 张俊林的优质专栏
+  -
+    name : Sota技术汇总
+    url : https://www.stateoftheart.ai/
+    desc : AI领域state-of-art技术汇总
+  - 
+    name : Sota代码
+    url : https://paperswithcode.com/sota
+    desc : 各领域效果最佳论文及代码
+  - 
+    name : Neurohive
+    url : https://neurohive.io/en/
+    desc : AI领域最新数据集+Sota效果（俄罗斯）
+  -
+    name : Tensorflow中国社区
+    url : https://www.tensorflowers.cn/
+    desc : 谷歌组织的TF社区
+  - 
+    name : 酷壳
+    url : https://coolshell.cn
+    desc : 左耳朵耗子
+  - 
+    name : 莫烦系列教程
+    url : https://morvanzhou.github.io/
+    desc : Python、ML、RL等教程
+  -
+    name : 全球架构师峰会
+    url : https://archsummit.infoq.cn/2019/shenzhen/
+    desc : 架构师领域技术交流
+  -
+    name : 黄海广博士的学习总结(github)
+    url : https://github.com/fengdu78
+    desc : 机器学习、深度学习课程总结及完整资料
+  - 
+    name : 数林觅风
+    url : https://woaielf.github.io/
+    desc : 精美脑图笔记
+  -
+    name : 数学研发论坛
+    url : http://yoyowinwin.com:8000/about/
+    desc : 数学爱好者
+  -
+    name : 码云同步
+    url : https://gitee.com/wqw547243068
+    desc : 代码同步，解决github不稳定的问题
+  - 
+    name : hht
+    url : https://xhhszc.github.io
+    desc : 实践

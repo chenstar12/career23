@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+<div class="page clearfix" post>
+    <!-- 左侧布局 -->
+    <div class="left">
+        <!-- 文章标题，page是全局变量 -->
+        <h1>{{page.title}}</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>{{ page.date | date: "%F" }}
+            </div>
+
+            <div class="label-card">
+                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }} {% endif %}
+            </div>
+
+            <div class="label-card">
+                {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+            </div>
+
+            <div class="label-card">
+            {% include category.html %}
+            </div>
+
+            <div class="label-card">
+            {% include tag.html %}
+            </div>
+             <!-- 【2022-9-26】站点访问统计 -->
+            <div align="right">阅读量<span id="busuanzi_value_page_pv"></span>次 </div>
+        </div>
+        
+        <!-- 导读区 -->
+        {% include tool_note.html %}
+      
+        <!-- 文章内容 -->
+        <hr>
+            <article itemscope itemtype="http://schema.org/BlogPosting">
+                {{content}}
+            </article>
+        <hr>
+        
+        <!-- 打赏 -->
+        {% include tool_award.html %}
+
+        <!-- 分享工具 -->
+        <h2 id="share">Share</h2>
+        {% include tool_share.html %}
+
+        <!-- 相似文章 -->
+        {% assign hasSimilar = '' %}
+        {% for post in site.related_posts %}
+            {% assign postHasSimilar = false %}
+            {% for tag in post.tags %}
+                {% for thisTag in page.tags %}
+                    {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+                        {% if hasSimilar.size == 0 %}
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        {% endif %}
+                        <li class="relatedPost">
+                            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+                            {% if post.series %}
+                                (Series: {{ post.series }})
+                            {% endif %}
+                            </a>
+                        </li>
+                        {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+                        {% assign postHasSimilar = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+        {% if hasSimilar.size > 0 %}
+            </ul>
+        {% endif %}
+
+        <!-- 相关文章推荐 -->
+        <h2 id="comments">Related Posts</h2>
+
+        <!-- 翻页 -->
+        {% include previousAndNext.html %}
+	
+        <!-- 评论区 -->
+        <h2 id="comments">Comments</h2>
+        {% include comments.html %}
+	
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    
+    <!-- 右侧工具栏 -->
+    <div class="right">
+        <!-- 搜索框 -->
+        {% include tool_search.html %}
+        <!-- 访问可视化 -->
+        {% include tool_visit.html %}
+        <div class="wrap">
+            <!-- Content目录区 -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    {% if hasSimilar.size > 0 %}
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    {% endif %}
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 公众号区 -->
+            {% include tool_moment.html %}
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+            
+        </div>
+
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+
+<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+
+<!-- 【2022-9-1】  支持latex数学公式显示 -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

@@ -1,15 +1,4 @@
----
-title: SQL语句在MySQL中的执行过程
-category: 数据库
-tag:
-  - MySQL
----
-
-> 本文来自[木木匠](https://github.com/kinglaw1204)投稿。
-
-本篇文章会分析下一个 SQL 语句在 MySQL 中的执行流程，包括 SQL 的查询在 MySQL 内部会怎么流转，SQL 语句的更新是怎么完成的。
-
-在分析之前我会先带着你看看 MySQL 的基础架构，知道了 MySQL 由那些组件组成以及这些组件的作用是什么，可以帮助我们理解和解决这些问题。
+SQL 语句在 MySQL 中的执行流程，包括 SQL 的查询在 MySQL 内部会怎么流转，SQL 语句的更新是怎么完成的。
 
 ## 一 MySQL 基础架构分析
 

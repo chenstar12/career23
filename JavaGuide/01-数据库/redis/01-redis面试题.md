@@ -1,10 +1,10 @@
+本机安装 redis 或 redis 官网的[在线 redis 环境](https://try.redis.io/)；
+
+<img src="./images/redis-all/try-redis.png" alt="try-redis" style="zoom: 67%;" />
+
 ## Redis 常见数据结构
 
-你可以自己本机安装 redis 或者通过 redis 官网提供的[在线 redis 环境](https://try.redis.io/)。
-
-![try-redis](./images/redis-all/try-redis.png)
-
-### string
+string
 
 1. **介绍** ：string 数据结构是简单的 key-value 类型。虽然 Redis 是用 C 语言写的，但是 Redis 并没有使用 C 的字符串表示，而是自己构建了一种 **简单动态字符串**（simple dynamic string，**SDS**）。相比于 C 的原生字符串，Redis 的 SDS 不光可以保存文本数据还可以保存二进制数据，并且获取字符串长度复杂度为 O(1)（C 字符串为 O(N)）,除此之外，Redis 的 SDS API 是安全的，不会造成缓冲区溢出。
 2. **常用命令：** `set,get,strlen,exists,decr,incr,setex` 等等。

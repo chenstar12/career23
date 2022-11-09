@@ -1,25 +1,7 @@
----
-title: 一千行 MySQL 学习笔记
-category: 数据库
-tag:
-  - MySQL
----
-
-> 原文地址：https://shockerli.net/post/1000-line-mysql-note/ ，JavaGuide 对本文进行了简答排版，新增了目录。
-> 作者：格物
-
-非常不错的总结，强烈建议保存下来，需要的时候看一看。
-
 ### 基本操作
 
 ```mysql
-/* Windows服务 */
--- 启动MySQL
-    net start mysql
--- 创建Windows服务
-    sc create mysql binPath= mysqld_bin_path(注意：等号与值之间有空格)
-/* 连接与断开服务器 */
-mysql -h 地址 -P 端口 -u 用户名 -p 密码
+mysql -h 地址 -P 端口 -u 用户名 -p 密码 -- 连接与断开服务器
 SHOW PROCESSLIST -- 显示哪些线程正在运行
 SHOW VARIABLES -- 显示系统变量信息
 ```
@@ -27,14 +9,12 @@ SHOW VARIABLES -- 显示系统变量信息
 ### 数据库操作
 
 ```mysql
-/* 数据库操作 */ ------------------
 -- 查看当前数据库
     SELECT DATABASE();
 -- 显示当前时间、用户名、数据库版本
     SELECT now(), user(), version();
 -- 创建库
     CREATE DATABASE[ IF NOT EXISTS] 数据库名 数据库选项
-    数据库选项：
         CHARACTER SET charset_name
         COLLATE collation_name
 -- 查看已有库

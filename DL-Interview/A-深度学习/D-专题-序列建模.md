@@ -1,26 +1,12 @@
-**相关专题**
-
-- [专题-RNN](./B-专题-RNN.md)
-
-
-
 - [序列建模简述](#序列建模简述)
 - [Seq2Seq](#seq2seq)
     - [解码方法（贪心、Beam Search、维特比算法）](#解码方法贪心beam-search维特比算法)
-        - [Beam Search（集束搜索）](#beam-search集束搜索)
-        - [维特比（Viterbi）算法 TODO](#维特比viterbi算法-todo)
-        - [其他最短路径算法](#其他最短路径算法)
     - [构建 Seq2Seq 一般做法](#构建-seq2seq-一般做法)
 - [序列的表示学习](#序列的表示学习)
     - [学习任务无关的 Sentence Embedding](#学习任务无关的-sentence-embedding)
 - [CNN 与序列建模](#cnn-与序列建模)
     - [一维卷积](#一维卷积)
 - [时间卷积网络（TCN）](#时间卷积网络tcn)
-    - [WaveNet](#wavenet)
-    - [因果卷积](#因果卷积)
-    - [空洞卷积](#空洞卷积)
-    - [Highway 网络](#highway-网络)
-    - [残差模块](#残差模块)
 - [Reference](#reference)
 
 
